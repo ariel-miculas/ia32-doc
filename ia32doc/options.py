@@ -195,7 +195,7 @@ class DocProcessorOptions(object):
             file = kwargs.pop('file')
 
             with open(file) as f:
-                new_kwargs = yaml.load(f.read())
+                new_kwargs = yaml.safe_load(f.read())
 
             #
             # Prefer original kwargs over config values.
